@@ -4,7 +4,7 @@
 # Project created by QtCreator 2013-02-20T20:53:56
 #
 #-------------------------------------------------
-include(../config.pri)
+include(../mainconfig.pri)
 
 QT       += core gui
 

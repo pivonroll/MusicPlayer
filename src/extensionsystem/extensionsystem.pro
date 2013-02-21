@@ -1,4 +1,4 @@
-include(../config.pri)
+include(../mainconfig.pri)
 
 TEMPLATE = lib
 TARGET = ExtensionSystem
