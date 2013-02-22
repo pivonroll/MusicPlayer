@@ -25,18 +25,24 @@ void PluginManager::loadPlugins()
     qDebug() << "Accessing plugins in folder: " << pluginsDir.path();
 
     foreach (QString fileName, pluginsDir.entryList(QDir::Files)) {
-        qDebug() << "Testing " << pluginsDir.absoluteFilePath(fileName);
-        QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
-        if (loader.load()) {
-            qDebug() << "Plugin loaded successfully: " << fileName;
+#ifdef Q_OS_WIN
+        if(fileName.endsWith(".dll")) {
+#else
+        if(fileName.endsWith(".so")) {
+#endif
+            qDebug() << "Testing " << pluginsDir.absoluteFilePath(fileName);
+            QPluginLoader loader(pluginsDir.absoluteFilePath(fileName));
+            if (loader.load()) {
+                qDebug() << "Plugin loaded successfully: " << fileName;
 
-            QObject *pluginInstance = loader.instance();
-            IPlugin *plugin = qobject_cast<IPlugin *>(pluginInstance);
-            if(plugin)
-                m_instance->initializePlugin(plugin);
-        }
-        else {
-            qDebug() << "Failed to load plugin: " << fileName << "Error: " << loader.errorString();
+                QObject *pluginInstance = loader.instance();
+                IPlugin *plugin = qobject_cast<IPlugin *>(pluginInstance);
+                if(plugin)
+                    m_instance->initializePlugin(plugin);
+            }
+            else {
+                qDebug() << "Failed to load plugin: " << fileName << "Error: " << loader.errorString();
+            }
         }
     }
 }

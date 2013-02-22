@@ -1,0 +1,1 @@
+include(../extensionsystem/extensionsystem.pri)
