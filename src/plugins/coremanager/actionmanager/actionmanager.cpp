@@ -2,6 +2,7 @@
 #include "actionmanager_private.h"
 
 namespace CoreManager {
+namespace ActionManager {
 
 ActionManager* ActionManager::m_instance = 0;
 
@@ -26,4 +27,5 @@ ActionContainer *ActionManager::createMenu(const QString &menuTitle, const QStri
     return ac;
 }
 
+} // namespace ActionManager
 } // namespace CoreManager

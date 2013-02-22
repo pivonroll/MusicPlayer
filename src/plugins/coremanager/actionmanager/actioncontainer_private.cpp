@@ -1,9 +1,9 @@
-#include "actioncontainer.h"
+#include "actioncontainer_private.h"
 
 namespace CoreManager {
 namespace ActionManager {
 
-ActionContainer::ActionContainer()
+ActionContainer_Private::ActionContainer_Private()
 {
 }
 

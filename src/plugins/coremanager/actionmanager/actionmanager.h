@@ -4,6 +4,7 @@
 #include <QString>
 
 namespace CoreManager {
+namespace ActionManager {
 
 class ActionContainer;
 class ActionManager_Private;
@@ -22,6 +23,7 @@ private:
     ActionManager_Private *d;
 };
 
+} // namespace ActionManager
 } // namespace CoreManager
 
 #endif // COREMANAGER_ACTIONMANAGER_H

@@ -1,9 +1,9 @@
-#include "actioncontainer.h"
+#include "command.h"
 
 namespace CoreManager {
 namespace ActionManager {
 
-ActionContainer::ActionContainer()
+Command::Command()
 {
 }
 

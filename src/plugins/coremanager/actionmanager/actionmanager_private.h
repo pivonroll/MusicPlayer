@@ -4,6 +4,7 @@
 #include <QList>
 
 namespace CoreManager {
+namespace ActionManager {
 
 class ActionContainer;
 
@@ -16,6 +17,7 @@ private:
     QList<ActionContainer *> m_menus;
 };
 
+} // namespace ActionManager
 } // namespace CoreManager
 
 #endif // COREMANAGER_ACTIONMANAGER_PRIVATE_H
