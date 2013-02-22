@@ -39,6 +39,8 @@ void PluginManager::loadPlugins()
                 IPlugin *plugin = qobject_cast<IPlugin *>(pluginInstance);
                 if(plugin)
                     m_instance->initializePlugin(plugin);
+                else
+                    qDebug() << "Unsupported plugin type. Plugin does not implement IPlugin interface.";
             }
             else {
                 qDebug() << "Failed to load plugin: " << fileName << "Error: " << loader.errorString();
