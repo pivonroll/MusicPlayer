@@ -4,6 +4,9 @@
 #include <iplugin.h>
 
 namespace CoreManagerPlugin {
+
+class ActionContainer;
+
 namespace Internal {
 
 class CoreManager_Private;
@@ -23,6 +26,7 @@ public:
 private:
     static CorePlugin *m_instance;
     CoreManager_Private *d;
+    ActionContainer *m_actionContainer;
 };
 
 } // namespace Internal

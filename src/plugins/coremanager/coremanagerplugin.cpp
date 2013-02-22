@@ -1,6 +1,7 @@
 #include "coremanagerplugin.h"
 #include "coremanager_private.h"
 #include "coremanager_constants.h"
+#include <QDebug>
 
 namespace CoreManagerPlugin {
 namespace Internal {

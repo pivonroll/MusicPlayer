@@ -1,1 +1,1 @@
-include(../plugin.pri)
+include(../plugins.pri)

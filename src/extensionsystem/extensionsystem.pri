@@ -1,3 +1,5 @@
 include(../mainconfig.pri)
-LIBS += -L$$LIBRARY_PATH
+INCLUDEPATH += $$PWD
+LIBS *= -lExtensionSystem
+
  

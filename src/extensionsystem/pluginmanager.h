@@ -2,12 +2,13 @@
 #define PLUGINMANAGER_H
 
 #include <QString>
+#include "extensionsystem_global.h"
 
 namespace ExtensionSystem {
 
 class IPlugin;
 
-class PluginManager
+class EXTENSIONSYSTEM_EXPORT PluginManager
 {
 public:
     PluginManager();
