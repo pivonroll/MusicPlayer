@@ -2,6 +2,7 @@
 #define COREMANAGER_ACTIONCONTAINER_H
 
 #include <QString>
+#include "context.h"
 
 class QMenu;
 class QAction;
@@ -12,10 +13,10 @@ namespace ActionManager {
 class ActionContainer
 {
 public:
-    ActionContainer(const QString &id);
+    ActionContainer(const Context::Context &context);
     virtual ~ActionContainer();
 
-    QString id() const;
+    Context::Context context() const;
 
     virtual void addAction(QAction *before, QAction *action) = 0;
     virtual void addMenu(QAction *before, QMenu *menu) = 0;
@@ -24,7 +25,7 @@ public:
     virtual void removeMenu(QMenu *menu) = 0;
 
 protected:
-    QString m_id;
+    Context::Context m_context;
 };
 
 } // namespace ActionManager

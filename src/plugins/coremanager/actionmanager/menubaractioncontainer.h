@@ -11,7 +11,7 @@ namespace ActionManager {
 class MenuBarActionContainer : public ActionContainer
 {
 public:
-    MenuBarActionContainer(const QString &id);
+    MenuBarActionContainer(const Context::Context &context);
 
     void addAction(QAction *before, QAction *action);
     void addMenu(QAction *before, QMenu *menu);

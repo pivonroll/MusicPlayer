@@ -9,7 +9,7 @@ namespace ActionManager {
 class MenuActionContainer : public ActionContainer
 {
 public:
-    MenuActionContainer(const QString &id);
+    MenuActionContainer(const Context::Context &context);
     ~MenuActionContainer();
 
     void addAction(QAction *before, QAction *action);

@@ -32,5 +32,13 @@ ActionContainer *ActionManager::createMenuBar(const QString &MenuBarID)
     return 0;
 }
 
+void ActionManager::registerAction(QAction *action)
+{
+}
+
+void ActionManager::unregisterAction(QAction *action)
+{
+}
+
 } // namespace ActionManager
 } // namespace CoreManager

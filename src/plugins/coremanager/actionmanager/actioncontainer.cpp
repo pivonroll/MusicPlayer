@@ -3,8 +3,8 @@
 namespace CoreManager {
 namespace ActionManager {
 
-ActionContainer::ActionContainer(const QString &id)
-    : m_id(id)
+ActionContainer::ActionContainer(const Context::Context &context)
+    : m_context(context)
 {
 }
 
@@ -12,9 +12,9 @@ ActionContainer::~ActionContainer()
 {
 }
 
-QString ActionContainer::id() const
+Context::Context ActionContainer::context() const
 {
-    return m_id;
+    return m_context;
 }
 
 } // namespace ActionManager

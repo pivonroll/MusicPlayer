@@ -3,6 +3,8 @@
 
 #include <QString>
 
+class QAction;
+
 namespace CoreManager {
 namespace ActionManager {
 
@@ -18,6 +20,9 @@ public:
     static ActionManager* instance();
     ActionContainer* createMenu(const QString &menuTitle, const QString &menuID);
     ActionContainer* createMenuBar(const QString &MenuBarID);
+
+    void registerAction(QAction *action);
+    void unregisterAction(QAction *action);
 
 private:
     static ActionManager *m_instance;

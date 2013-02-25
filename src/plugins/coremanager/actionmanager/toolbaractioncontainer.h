@@ -3,19 +3,26 @@
 
 #include "actioncontainer.h"
 
+class QToolBar;
+
 namespace CoreManager {
 namespace ActionManager {
 
 class ToolbarActionContainer : public ActionContainer
 {
 public:
-    ToolbarActionContainer(const QString &id);
+    ToolbarActionContainer(const Context::Context &context);
+
+    void setToolBar(QToolBar *toolBar);
 
     void addAction(QAction *before, QAction *action);
     void addMenu(QAction *before, QMenu *menu);
 
     void removeAction(QAction *action);
     void removeMenu(QMenu *menu);
+
+private:
+    QToolBar *m_toolBar;
 };
 
 } // namespace ActionManager

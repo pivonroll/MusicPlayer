@@ -1,7 +1,9 @@
 #ifndef COREMANAGER_ACTIONMANAGER_PRIVATE_H
 #define COREMANAGER_ACTIONMANAGER_PRIVATE_H
 
-#include <QList>
+#include <QHash>
+
+class QMenu;
 
 namespace CoreManager {
 namespace ActionManager {
@@ -14,7 +16,7 @@ public:
     ActionManager_Private();
 
 private:
-    QList<ActionContainer *> m_menus;
+    QHash<QString, QMenu*> m_actionContaniers;
 };
 
 } // namespace ActionManager

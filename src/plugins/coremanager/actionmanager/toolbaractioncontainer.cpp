@@ -3,9 +3,15 @@
 namespace CoreManager {
 namespace ActionManager {
 
-ToolbarActionContainer::ToolbarActionContainer(const QString &id)
-    : ActionContainer(id)
+ToolbarActionContainer::ToolbarActionContainer(const Context::Context &context)
+    : ActionContainer(context),
+      m_toolBar(0)
 {
+}
+
+void ToolbarActionContainer::setToolBar(QToolBar *toolBar)
+{
+    m_toolBar = toolBar;
 }
 
 void ToolbarActionContainer::addAction(QAction *before, QAction *action)

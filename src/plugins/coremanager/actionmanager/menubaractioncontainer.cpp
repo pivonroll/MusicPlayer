@@ -3,8 +3,8 @@
 namespace CoreManager {
 namespace ActionManager {
 
-MenuBarActionContainer::MenuBarActionContainer(const QString &id)
-    : ActionContainer(id),
+MenuBarActionContainer::MenuBarActionContainer(const Context::Context &context)
+    : ActionContainer(context),
       m_menuBar(0)
 {
 }
