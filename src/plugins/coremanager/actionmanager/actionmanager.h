@@ -17,6 +17,7 @@ public:
 
     static ActionManager* instance();
     ActionContainer* createMenu(const QString &menuTitle, const QString &menuID);
+    ActionContainer* createMenuBar(const QString &MenuBarID);
 
 private:
     static ActionManager *m_instance;

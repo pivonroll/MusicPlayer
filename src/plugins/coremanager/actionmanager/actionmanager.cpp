@@ -27,5 +27,10 @@ ActionContainer *ActionManager::createMenu(const QString &menuTitle, const QStri
     return ac;
 }
 
+ActionContainer *ActionManager::createMenuBar(const QString &MenuBarID)
+{
+    return 0;
+}
+
 } // namespace ActionManager
 } // namespace CoreManager

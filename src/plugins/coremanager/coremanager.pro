@@ -12,10 +12,12 @@ HEADERS += \
     actionmanager/actionmanager_private.h \
     actionmanager/actionmanager.h \
     actionmanager/actioncontainer.h \
-    actionmanager/actioncontainer_private.h \
     actionmanager/command.h \
     actionmanager/action.h \
-    actionmanager/shortcut.h
+    actionmanager/shortcut.h \
+    actionmanager/menuactioncontainer.h \
+    actionmanager/menubaractioncontainer.h \
+    actionmanager/toolbaractioncontainer.h
 
 SOURCES += \
     coremanager_private.cpp \
@@ -23,8 +25,10 @@ SOURCES += \
     actionmanager/actionmanager_private.cpp \
     actionmanager/actionmanager.cpp \
     actionmanager/actioncontainer.cpp \
-    actionmanager/actioncontainer_private.cpp \
     actionmanager/command.cpp \
     actionmanager/action.cpp \
-    actionmanager/shortcut.cpp
+    actionmanager/shortcut.cpp \
+    actionmanager/menuactioncontainer.cpp \
+    actionmanager/menubaractioncontainer.cpp \
+    actionmanager/toolbaractioncontainer.cpp
 
