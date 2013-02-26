@@ -28,6 +28,8 @@ public:
     static ActionContainer* menuBar(const QString &id);
     static ActionContainer* toolBar(const QString &id);
 
+    static Shortcut *createShortcut(const QString &id);
+    static void removeShortcut(const QString &id);
     static QList<Shortcut *> shortcuts() const;
 
     void registerAction(QAction *action, const QString &actionID);
