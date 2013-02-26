@@ -3,7 +3,7 @@
 
 #include <QHash>
 
-class QMenu;
+class QAction;
 
 namespace CoreManager {
 namespace ActionManager {
@@ -12,11 +12,13 @@ class ActionContainer;
 
 class ActionManager_Private
 {
+    QHash<QString, ActionContainer* > m_menuContaniers;
+    QHash<QString, ActionContainer* > m_menuBarContainers;
+    QHash<QString, ActionContainer* > m_toolBarContainers;
+    QHash<QString, QAction *> m_actions;
+
 public:
     ActionManager_Private();
-
-private:
-    QHash<QString, QMenu*> m_actionContaniers;
 };
 
 } // namespace ActionManager

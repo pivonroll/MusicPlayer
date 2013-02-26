@@ -27,8 +27,8 @@ public:
     static ActionContainer* menuBar(const QString &id);
     static ActionContainer* toolBar(const QString &id);
 
-    void registerAction(QAction *action);
-    void unregisterAction(QAction *action);
+    void registerAction(QAction *action, const QString &actionID);
+    void unregisterAction(const QString &actionID);
 
 private:
     static ActionManager *m_instance;
