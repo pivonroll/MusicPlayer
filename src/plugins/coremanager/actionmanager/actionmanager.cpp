@@ -109,6 +109,11 @@ ActionContainer *ActionManager::toolBar(const QString &id)
     return 0;
 }
 
+QList<Shortcut *> ActionManager::shortcuts() const
+{
+    return m_instance->d->m_shortcuts.values();
+}
+
 void ActionManager::registerAction(QAction *action, const QString &actionID)
 {
     if(m_instance) {

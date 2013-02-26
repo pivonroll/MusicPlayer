@@ -11,6 +11,7 @@ namespace ActionManager {
 
 class ActionContainer;
 class ActionManager_Private;
+class Shortcut;
 
 class ActionManager
 {
@@ -26,6 +27,8 @@ public:
     static ActionContainer* menu(const QString &id);
     static ActionContainer* menuBar(const QString &id);
     static ActionContainer* toolBar(const QString &id);
+
+    static QList<Shortcut *> shortcuts() const;
 
     void registerAction(QAction *action, const QString &actionID);
     void unregisterAction(const QString &actionID);
