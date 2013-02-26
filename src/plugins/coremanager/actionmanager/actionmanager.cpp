@@ -1,9 +1,13 @@
 #include "actionmanager.h"
+
+#include <QShortcut>
+#include <QDebug>
+
 #include "actionmanager_private.h"
 #include "menuactioncontainer.h"
 #include "menubaractioncontainer.h"
-#include "shortcut.h"
 #include "toolbaractioncontainer.h"
+
 
 namespace CoreManager {
 namespace ActionManager {
@@ -45,14 +49,14 @@ ActionContainer *ActionManager::createMenu(const QString &menuID)
 ActionContainer *ActionManager::createMenuBar(const QString &menuBarID)
 {
     if(m_instance) {
-        if(m_instance->d->m_menuBarContainers.contains(menuID)) {
-            qDebug() << "Error menu bar with menuBarID: " << menuID << " already exists.";
+        if(m_instance->d->m_menuBarContainers.contains(menuBarID)) {
+            qDebug() << "Error menu bar with menuBarID: " << menuBarID << " already exists.";
             return 0;
         }
 
         MenuBarActionContainer *mbac = new MenuBarActionContainer();
         m_instance->d->m_menuBarContainers.insert(menuBarID, mbac);
-        return mac;
+        return mbac;
     }
 
     qDebug() << "Error in ActionManager::createMenuBar()! Instance of ActionManager does not exist.";
@@ -62,14 +66,14 @@ ActionContainer *ActionManager::createMenuBar(const QString &menuBarID)
 ActionContainer *ActionManager::createToolBar(const QString &toolBarID)
 {
     if(m_instance) {
-        if(m_instance->d->m_toolBarContainers.contains(menuID)) {
-            qDebug() << "Error tool bar with toolBarID: " << menuID << " already exists.";
+        if(m_instance->d->m_toolBarContainers.contains(toolBarID)) {
+            qDebug() << "Error tool bar with toolBarID: " << toolBarID << " already exists.";
             return 0;
         }
 
         ToolbarActionContainer *tbac = new ToolbarActionContainer();
         m_instance->d->m_toolBarContainers.insert(toolBarID, tbac);
-        return mac;
+        return tbac;
     }
 
     qDebug() << "Error in ActionManager::createToolBar()! Instance of ActionManager does not exist.";
@@ -110,7 +114,7 @@ ActionContainer *ActionManager::toolBar(const QString &id)
     return 0;
 }
 
-Shortcut* ActionManager::createShortcut(const QString &id)
+QShortcut* ActionManager::createShortcut(const QString &id)
 {
     if(m_instance) {
         if(m_instance->d->m_shortcuts.contains(id)) {
@@ -118,9 +122,9 @@ Shortcut* ActionManager::createShortcut(const QString &id)
             return m_instance->d->m_shortcuts.value(id);
         }
 
-        Shortchut *s = new Shortchut;
-        m_instance->d->m_shortcuts.insert(id, s);
-        return s;
+//        QShortcut *s = new QShortcut();
+//        m_instance->d->m_shortcuts.insert(id, s);
+//        return s;
     }
 
     qDebug() << "Error in ActionManager::createShortcut()! Instance of ActionManager does not exist.";
@@ -141,7 +145,7 @@ void ActionManager::removeShortcut(const QString &id)
     qDebug() << "Error in ActionManager::createShortcut()! Instance of ActionManager does not exist.";
 }
 
-QList<Shortcut *> ActionManager::shortcuts() const
+QList<QShortcut *> ActionManager::shortcuts()
 {
     return m_instance->d->m_shortcuts.values();
 }
@@ -158,7 +162,6 @@ void ActionManager::registerAction(QAction *action, const QString &actionID)
     }
 
     qDebug() << "Error in ActionManager::registerAction();! Instance of ActionManager does not exist.";
-    return 0;
 }
 
 void ActionManager::unregisterAction(const QString &actionID)
@@ -173,7 +176,6 @@ void ActionManager::unregisterAction(const QString &actionID)
     }
 
     qDebug() << "Error in ActionManager::registerAction();! Instance of ActionManager does not exist.";
-    return 0;
 }
 
 } // namespace ActionManager

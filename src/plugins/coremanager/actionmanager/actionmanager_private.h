@@ -4,7 +4,7 @@
 #include <QHash>
 
 class QAction;
-class QShortchut;
+class QShortcut;
 
 namespace CoreManager {
 namespace ActionManager {
@@ -13,13 +13,13 @@ class ActionContainer;
 
 class ActionManager_Private
 {
+public:
     QHash<QString, ActionContainer* > m_menuContaniers;
     QHash<QString, ActionContainer* > m_menuBarContainers;
     QHash<QString, ActionContainer* > m_toolBarContainers;
     QHash<QString, QAction *> m_actions;
-    QHash<QString, QShortchut *> m_shortcuts;
+    QHash<QString, QShortcut *> m_shortcuts;
 
-public:
     ActionManager_Private();
 };
 

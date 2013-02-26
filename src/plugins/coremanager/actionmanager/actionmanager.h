@@ -5,13 +5,13 @@
 #include "../context.h"
 
 class QAction;
+class QShortcut;
 
 namespace CoreManager {
 namespace ActionManager {
 
 class ActionContainer;
 class ActionManager_Private;
-class Shortcut;
 
 class ActionManager
 {
@@ -28,9 +28,9 @@ public:
     static ActionContainer* menuBar(const QString &id);
     static ActionContainer* toolBar(const QString &id);
 
-    static Shortcut *createShortcut(const QString &id);
+    static QShortcut *createShortcut(const QString &id);
     static void removeShortcut(const QString &id);
-    static QList<Shortcut *> shortcuts() const;
+    static QList<QShortcut *> shortcuts();
 
     void registerAction(QAction *action, const QString &actionID);
     void unregisterAction(const QString &actionID);
