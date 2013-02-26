@@ -11,7 +11,7 @@ namespace ActionManager {
 class ToolbarActionContainer : public ActionContainer
 {
 public:
-    ToolbarActionContainer(const Context::Context &context);
+    ToolbarActionContainer();
 
     void addAction(QAction *before, QAction *action);
     void addMenu(QAction *before, QMenu *menu);
@@ -19,6 +19,7 @@ public:
     void removeAction(QAction *action);
     void removeMenu(QMenu *menu);
 
+    QToolBar* toolBar() const;
     void setToolBar(QToolBar *toolBar);
 
 private:

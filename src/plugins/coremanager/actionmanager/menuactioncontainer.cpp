@@ -5,9 +5,8 @@
 namespace CoreManager {
 namespace ActionManager {
 
-MenuActionContainer::MenuActionContainer(const Context::Context &context)
-    : ActionContainer(context),
-      m_menu(0)
+MenuActionContainer::MenuActionContainer()
+    : m_menu(0)
 {
 }
 
@@ -71,6 +70,11 @@ void MenuActionContainer::removeMenu(QMenu *menu)
         return;
     }
     m_menu->removeAction(menu->menuAction());
+}
+
+QMenu *MenuActionContainer::menu() const
+{
+    return m_menu;
 }
 
 void MenuActionContainer::setMenu(QMenu *menu)

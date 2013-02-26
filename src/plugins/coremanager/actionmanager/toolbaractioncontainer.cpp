@@ -5,9 +5,8 @@
 namespace CoreManager {
 namespace ActionManager {
 
-ToolbarActionContainer::ToolbarActionContainer(const Context::Context &context)
-    : ActionContainer(context),
-      m_toolBar(0)
+ToolbarActionContainer::ToolbarActionContainer()
+    : m_toolBar(0)
 {
 }
 
@@ -52,6 +51,11 @@ void ToolbarActionContainer::removeMenu(QMenu *menu)
     Q_UNUSED(menu)
     qDebug() << "ToolbarActionContainer::removeMenu: This method is empty.";
     return;
+}
+
+QToolBar *ToolbarActionContainer::toolBar() const
+{
+    return m_toolBar;
 }
 
 void ToolbarActionContainer::setToolBar(QToolBar *toolBar)

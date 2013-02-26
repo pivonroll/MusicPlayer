@@ -17,7 +17,8 @@ HEADERS += \
     actionmanager/menuactioncontainer.h \
     actionmanager/menubaractioncontainer.h \
     actionmanager/toolbaractioncontainer.h \
-    context.h
+    context.h \
+    actionmanager/actionmanager_constants.h
 
 SOURCES += \
     coremanager_private.cpp \
