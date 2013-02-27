@@ -16,7 +16,8 @@ HEADERS += \
     actionmanager/menubaractioncontainer.h \
     actionmanager/toolbaractioncontainer.h \
     context.h \
-    actionmanager/actionmanager_constants.h
+    actionmanager/actionmanager_constants.h \
+    actionmanager/shortcut.h
 
 SOURCES += \
     coremanager_private.cpp \
@@ -26,5 +27,6 @@ SOURCES += \
     actionmanager/actioncontainer.cpp \
     actionmanager/menuactioncontainer.cpp \
     actionmanager/menubaractioncontainer.cpp \
-    actionmanager/toolbaractioncontainer.cpp
+    actionmanager/toolbaractioncontainer.cpp \
+    actionmanager/shortcut.cpp
 

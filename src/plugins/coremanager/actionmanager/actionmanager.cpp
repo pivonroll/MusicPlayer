@@ -1,13 +1,12 @@
 #include "actionmanager.h"
 
-#include <QShortcut>
 #include <QDebug>
 
 #include "actionmanager_private.h"
 #include "menuactioncontainer.h"
 #include "menubaractioncontainer.h"
 #include "toolbaractioncontainer.h"
-
+#include "shortcut.h"
 
 namespace CoreManager {
 namespace ActionManager {
@@ -114,7 +113,7 @@ ActionContainer *ActionManager::toolBar(const QString &id)
     return 0;
 }
 
-QShortcut* ActionManager::createShortcut(const QString &id)
+Shortcut *ActionManager::createShortcut(const QString &id)
 {
     if(m_instance) {
         if(m_instance->d->m_shortcuts.contains(id)) {
@@ -122,9 +121,9 @@ QShortcut* ActionManager::createShortcut(const QString &id)
             return m_instance->d->m_shortcuts.value(id);
         }
 
-//        QShortcut *s = new QShortcut();
-//        m_instance->d->m_shortcuts.insert(id, s);
-//        return s;
+        Shortcut *s = new Shortcut();
+        m_instance->d->m_shortcuts.insert(id, s);
+        return s;
     }
 
     qDebug() << "Error in ActionManager::createShortcut()! Instance of ActionManager does not exist.";
@@ -145,7 +144,7 @@ void ActionManager::removeShortcut(const QString &id)
     qDebug() << "Error in ActionManager::createShortcut()! Instance of ActionManager does not exist.";
 }
 
-QList<QShortcut *> ActionManager::shortcuts()
+QList<Shortcut *> ActionManager::shortcuts()
 {
     return m_instance->d->m_shortcuts.values();
 }
