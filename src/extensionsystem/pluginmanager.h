@@ -19,7 +19,7 @@ public:
 
 private:
     void    initializePlugin(IPlugin *plugin);
-private:
+
     static PluginManager* m_instance;
     QString m_pluginPath;
 };

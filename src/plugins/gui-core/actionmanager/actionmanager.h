@@ -2,7 +2,6 @@
 #define COREMANAGER_ACTIONMANAGER_H
 
 #include <QString>
-#include "../context.h"
 
 class QAction;
 
