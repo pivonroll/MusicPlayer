@@ -4,6 +4,7 @@ TEMPLATE = lib
 TARGET = $$qtLibraryTarget(coremanager)
 
 DESTDIR = $$PLUGIN_PATH
+DEFINES += COREMANAGER_LIBRARY
 
 HEADERS += \
     coremanager_private.h \
@@ -12,7 +13,8 @@ HEADERS += \
     context.h \
     mimedatabase/mimedatabase.h \
     mimedatabase/mimetype.h \
-    mimedatabase/mimedatabase_private.h
+    mimedatabase/mimedatabase_private.h \
+    coremanager_global.h
 
 SOURCES += \
     coremanager_private.cpp \

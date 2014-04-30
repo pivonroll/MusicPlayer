@@ -1,7 +1,7 @@
 #ifndef EXTENSIONSYSTEM_GLOBAL_H
 #define EXTENSIONSYSTEM_GLOBAL_H
 
-#include <qglobal.h>
+#include <QtGlobal>
 
 #if defined(EXTENSIONSYSTEM_LIBRARY)
 #  define EXTENSIONSYSTEM_EXPORT Q_DECL_EXPORT

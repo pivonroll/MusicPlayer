@@ -18,7 +18,7 @@ public:
     static void setPluginPath(const QString &path);
 
 private:
-    void    initializePlugin(IPlugin *plugin);
+    void initializePlugin(IPlugin *plugin);
 
     static PluginManager* m_instance;
     QString m_pluginPath;

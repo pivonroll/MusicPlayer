@@ -2,6 +2,7 @@
 #define CORE_INTERNAL_COREMANAGER_H
 
 #include <iplugin.h>
+#include "coremanager_global.h"
 
 namespace CoreManagerPlugin {
 
@@ -11,11 +12,11 @@ namespace Internal {
 
 class CoreManager_Private;
 
-class CorePlugin : public QObject, public ExtensionSystem::IPlugin
+class COREMANAGER_EXPORT CorePlugin : public QObject, public ExtensionSystem::IPlugin
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID IPlugin_iic FILE "coremanager.json")
     Q_INTERFACES(ExtensionSystem::IPlugin)
-
 public:
     CorePlugin();
     virtual ~CorePlugin();

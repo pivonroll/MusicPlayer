@@ -2,7 +2,7 @@
 #include "soundsystem_constants.h"
 #include <coremanagerplugin.h>
 
-namespace PlaySystem {
+namespace SoundSystem {
 namespace Internal {
 
 SoundSystemPlugin::SoundSystemPlugin()
@@ -25,6 +25,6 @@ QString SoundSystemPlugin::pluginName() const
 }
 
 } // namespace Internal
-} // namespace PlaySystem
+} // namespace SoundSystem
 
-Q_EXPORT_PLUGIN(PlaySystem::Internal::SoundSystemPlugin)
+Q_PLUGIN_METADATA(IID IPlugin_iic)

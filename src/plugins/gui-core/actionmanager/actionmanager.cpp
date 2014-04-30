@@ -3,12 +3,12 @@
 #include <QDebug>
 
 #include "actionmanager_private.h"
-#include "menuactioncontainer.h"
+#include "menumanager.h"
 #include "menubaractioncontainer.h"
 #include "toolbaractioncontainer.h"
 #include "shortcut.h"
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
 ActionManager* ActionManager::m_instance = 0;
@@ -28,7 +28,7 @@ ActionManager *ActionManager::instance()
     return m_instance;
 }
 
-ActionContainer *ActionManager::createMenu(const QString &menuID)
+IActionContainer *ActionManager::createMenu(const QString &menuID)
 {
     if(m_instance) {
         if(m_instance->d->m_menuContaniers.contains(menuID)) {
@@ -36,7 +36,7 @@ ActionContainer *ActionManager::createMenu(const QString &menuID)
             return 0;
         }
 
-        MenuActionContainer *mac = new MenuActionContainer();
+        MenuManager *mac = new MenuManager();
         m_instance->d->m_menuContaniers.insert(menuID, mac);
         return mac;
     }
@@ -45,7 +45,7 @@ ActionContainer *ActionManager::createMenu(const QString &menuID)
     return 0;
 }
 
-ActionContainer *ActionManager::createMenuBar(const QString &menuBarID)
+IActionContainer *ActionManager::createMenuBar(const QString &menuBarID)
 {
     if(m_instance) {
         if(m_instance->d->m_menuBarContainers.contains(menuBarID)) {
@@ -62,7 +62,7 @@ ActionContainer *ActionManager::createMenuBar(const QString &menuBarID)
     return 0;
 }
 
-ActionContainer *ActionManager::createToolBar(const QString &toolBarID)
+IActionContainer *ActionManager::createToolBar(const QString &toolBarID)
 {
     if(m_instance) {
         if(m_instance->d->m_toolBarContainers.contains(toolBarID)) {
@@ -79,7 +79,7 @@ ActionContainer *ActionManager::createToolBar(const QString &toolBarID)
     return 0;
 }
 
-ActionContainer *ActionManager::menu(const QString &id)
+IActionContainer *ActionManager::menu(const QString &id)
 {
     if(m_instance) {
         if(m_instance->d->m_menuContaniers.contains(id))
@@ -91,7 +91,7 @@ ActionContainer *ActionManager::menu(const QString &id)
     return 0;
 }
 
-ActionContainer *ActionManager::menuBar(const QString &id)
+IActionContainer *ActionManager::menuBar(const QString &id)
 {
     if(m_instance) {
         if(m_instance->d->m_menuBarContainers.contains(id))
@@ -102,7 +102,7 @@ ActionContainer *ActionManager::menuBar(const QString &id)
     return 0;
 }
 
-ActionContainer *ActionManager::toolBar(const QString &id)
+IActionContainer *ActionManager::toolBar(const QString &id)
 {
     if(m_instance) {
         if(m_instance->d->m_toolBarContainers.contains(id))
@@ -178,4 +178,4 @@ void ActionManager::unregisterAction(const QString &actionID)
 }
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager

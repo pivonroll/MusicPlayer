@@ -1,15 +1,11 @@
 #include "actioncontainer.h"
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
-ActionContainer::ActionContainer()
-{
-}
-
-ActionContainer::~ActionContainer()
+IActionContainer::~IActionContainer()
 {
 }
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager

@@ -2,7 +2,7 @@
 #include <QMenuBar>
 #include <QDebug>
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
 MenuBarActionContainer::MenuBarActionContainer()
@@ -81,4 +81,4 @@ void MenuBarActionContainer::setMenuBar(QMenuBar *menuBar)
 }
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager

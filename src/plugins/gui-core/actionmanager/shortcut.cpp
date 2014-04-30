@@ -1,6 +1,6 @@
 #include "shortcut.h"
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
 Shortcut::Shortcut()
@@ -23,4 +23,4 @@ void Shortcut::setKeySequence(const QKeySequence &keySequence)
 }
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager

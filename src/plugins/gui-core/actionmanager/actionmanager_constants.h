@@ -1,7 +1,7 @@
-#ifndef ACTIONMANAGER_CONSTANTS_H
-#define ACTIONMANAGER_CONSTANTS_H
+#ifndef GUICOREMANAGER_ACTIONMANAGER_CONSTANTS_H
+#define GUICOREMANAGER_ACTIONMANAGER_CONSTANTS_H
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 namespace Constants {
 
@@ -9,5 +9,5 @@ namespace Constants {
 
 } // namespace Constants
 } // namespace ActionManager
-} // namespace CoreManager
-#endif // ACTIONMANAGER_CONSTANTS_H
+} // namespace GuiCoreManager
+#endif // GUICOREMANAGER_ACTIONMANAGER_CONSTANTS_H

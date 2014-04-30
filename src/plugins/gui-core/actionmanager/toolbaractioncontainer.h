@@ -1,14 +1,16 @@
-#ifndef COREMANAGER_ACTIONMANAGER_TOOLBARACTIONCONTAINER_H
-#define COREMANAGER_ACTIONMANAGER_TOOLBARACTIONCONTAINER_H
+#ifndef GUICOREMANAGER_ACTIONMANAGER_TOOLBARACTIONCONTAINER_H
+#define GUICOREMANAGER_ACTIONMANAGER_TOOLBARACTIONCONTAINER_H
 
 #include "actioncontainer.h"
 
+QT_BEGIN_NAMESPACE
 class QToolBar;
+QT_END_NAMESPACE
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
-class ToolbarActionContainer : public ActionContainer
+class ToolbarActionContainer : public IActionContainer
 {
 public:
     ToolbarActionContainer();
@@ -27,6 +29,6 @@ private:
 };
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager
 
-#endif // COREMANAGER_ACTIONMANAGER_TOOLBARACTIONCONTAINER_H
+#endif // GUICOREMANAGER_ACTIONMANAGER_TOOLBARACTIONCONTAINER_H

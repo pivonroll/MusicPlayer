@@ -1,16 +1,16 @@
-#ifndef COREMANAGER_ACTIONMANAGER_MENUACTIONCONTAINER_H
-#define COREMANAGER_ACTIONMANAGER_MENUACTIONCONTAINER_H
+#ifndef GUICOREMANAGER_ACTIONMANAGER_MENUACTIONCONTAINER_H
+#define GUICOREMANAGER_ACTIONMANAGER_MENUACTIONCONTAINER_H
 
 #include "actioncontainer.h"
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
-class MenuActionContainer : public ActionContainer
+class MenuManager : public IActionContainer
 {
 public:
-    MenuActionContainer();
-    ~MenuActionContainer();
+    MenuManager();
+    ~MenuManager();
 
     void addAction(QAction *before, QAction *action);
     void addMenu(QAction *before, QMenu *menu);
@@ -26,6 +26,6 @@ private:
 };
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager
 
-#endif // COREMANAGER_ACTIONMANAGER_MENUACTIONCONTAINER_H
+#endif // GUICOREMANAGER_ACTIONMANAGER_MENUACTIONCONTAINER_H

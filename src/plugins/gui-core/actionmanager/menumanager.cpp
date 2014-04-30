@@ -1,36 +1,26 @@
-#include "menuactioncontainer.h"
+#include "menumanager.h"
 #include <QMenu>
 #include <QDebug>
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
-MenuActionContainer::MenuActionContainer()
+MenuManager::MenuManager()
     : m_menu(0)
 {
 }
 
-MenuActionContainer::~MenuActionContainer()
+MenuManager::~MenuManager()
 {
     delete m_menu;
     m_menu = 0;
 }
 
-void MenuActionContainer::addAction(QAction *before, QAction *action)
+void MenuManager::addAction(QAction *before, QAction *action)
 {
-    if(!m_menu) {
-        qDebug() << "Cannot add action. Use setMenu first to set menu.";
-        return;
-    }
-
-    else if(!action) {
-        qDebug() << "Action not added. Null pointer passed as argument for action.";
-        return;
-    }
-    m_menu->insertAction(before, action);
 }
 
-void MenuActionContainer::addMenu(QAction *before, QMenu *menu)
+void MenuManager::addMenu(QAction *before, QMenu *menu)
 {
     if(!m_menu) {
         qDebug() << "Cannot insert menu. Use setMenu first to set menu.";
@@ -44,7 +34,7 @@ void MenuActionContainer::addMenu(QAction *before, QMenu *menu)
     m_menu->insertMenu(before, menu);
 }
 
-void MenuActionContainer::removeAction(QAction *action)
+void MenuManager::removeAction(QAction *action)
 {
     if(!m_menu) {
         qDebug() << "Cannot remove action. Use setMenu first to set menu.";
@@ -58,7 +48,7 @@ void MenuActionContainer::removeAction(QAction *action)
     m_menu->removeAction(action);
 }
 
-void MenuActionContainer::removeMenu(QMenu *menu)
+void MenuManager::removeMenu(QMenu *menu)
 {
     if(!m_menu) {
         qDebug() << "Cannot remove menu. Use setMenu first to set menu.";
@@ -72,12 +62,12 @@ void MenuActionContainer::removeMenu(QMenu *menu)
     m_menu->removeAction(menu->menuAction());
 }
 
-QMenu *MenuActionContainer::menu() const
+QMenu *MenuManager::menu() const
 {
     return m_menu;
 }
 
-void MenuActionContainer::setMenu(QMenu *menu)
+void MenuManager::setMenu(QMenu *menu)
 {
     if(!menu) {
         qDebug() << "Menu not set. Null pointer passed as argument.";
@@ -87,4 +77,4 @@ void MenuActionContainer::setMenu(QMenu *menu)
 }
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager

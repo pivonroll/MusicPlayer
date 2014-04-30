@@ -2,6 +2,7 @@
 #define GUICORE_INTERNAL_GUICOREPLUGIN_H
 
 #include <iplugin.h>
+#include "guicore_global.h"
 
 namespace GuiCore {
 namespace Gui {
@@ -10,10 +11,12 @@ namespace Gui {
 
 namespace Internal {
 
-class GuiCorePlugin : public QObject, public ExtensionSystem::IPlugin
+class GUICORE_EXPORT GuiCorePlugin : public QObject, public ExtensionSystem::IPlugin
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID IPlugin_iic FILE "guicore.json")
     Q_INTERFACES(ExtensionSystem::IPlugin)
+
 public:
     GuiCorePlugin();
     ~GuiCorePlugin();

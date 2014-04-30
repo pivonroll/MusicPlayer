@@ -1,22 +1,25 @@
-#ifndef COREMANAGER_ACTIONMANAGER_PRIVATE_H
-#define COREMANAGER_ACTIONMANAGER_PRIVATE_H
+#ifndef GUICOREMANAGER_ACTIONMANAGER_PRIVATE_H
+#define GUICOREMANAGER_ACTIONMANAGER_PRIVATE_H
 
 #include <QHash>
+#include <QString>
 
+QT_BEGIN_NAMESPACE
 class QAction;
+QT_END_NAMESPACE
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
-class ActionContainer;
+class IActionContainer;
 class Shortcut;
 
 class ActionManager_Private
 {
 public:
-    QHash<QString, ActionContainer* > m_menuContaniers;
-    QHash<QString, ActionContainer* > m_menuBarContainers;
-    QHash<QString, ActionContainer* > m_toolBarContainers;
+    QHash<QString, IActionContainer* > m_menuContaniers;
+    QHash<QString, IActionContainer* > m_menuBarContainers;
+    QHash<QString, IActionContainer* > m_toolBarContainers;
     QHash<QString, QAction *> m_actions;
     QHash<QString, Shortcut *> m_shortcuts;
 
@@ -24,6 +27,6 @@ public:
 };
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager
 
-#endif // COREMANAGER_ACTIONMANAGER_PRIVATE_H
+#endif // GUICOREMANAGER_ACTIONMANAGER_PRIVATE_H

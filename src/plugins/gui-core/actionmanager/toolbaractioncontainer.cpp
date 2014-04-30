@@ -2,7 +2,7 @@
 #include <QToolBar>
 #include <QDebug>
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
 ToolbarActionContainer::ToolbarActionContainer()
@@ -67,4 +67,4 @@ void ToolbarActionContainer::setToolBar(QToolBar *toolBar)
 }
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager

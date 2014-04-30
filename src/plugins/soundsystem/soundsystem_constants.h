@@ -1,7 +1,7 @@
 #ifndef PLAYSYSTEM_GLOBAL_H
 #define PLAYSYSTEM_GLOBAL_H
 
-namespace PlaySystem {
+namespace SoundSystem {
 namespace Constants {
 
     char SoundSystemPlugin_Name[] = "SoundSystemPlugin";

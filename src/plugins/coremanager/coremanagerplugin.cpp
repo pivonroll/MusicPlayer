@@ -37,5 +37,4 @@ QString CorePlugin::pluginName() const
 } // namespace Internal
 } // namespace CoreManagerPlugin
 
-Q_EXPORT_PLUGIN(CoreManagerPlugin::Internal::CorePlugin)
-
+Q_PLUGIN_METADATA(IID IPlugin_iic)

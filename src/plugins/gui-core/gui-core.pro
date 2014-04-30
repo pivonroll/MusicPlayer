@@ -1,9 +1,12 @@
 include(gui-coreplugin_dependecies.pri)
 
+QT += core gui widgets
+
 TEMPLATE = lib
-TARGET = $$qtLibraryTarget(gui-core)
+TARGET = $$qtLibraryTarget(guicore)
 
 DESTDIR = $$PLUGIN_PATH
+DEFINES += GUICORE_LIBRARY
 
 HEADERS += \
     guicoreplugin.h \
@@ -13,10 +16,11 @@ HEADERS += \
     actionmanager/actionmanager_constants.h \
     actionmanager/actionmanager_private.h \
     actionmanager/actionmanager.h \
-    actionmanager/menuactioncontainer.h \
     actionmanager/menubaractioncontainer.h \
     actionmanager/shortcut.h \
-    actionmanager/toolbaractioncontainer.h
+    actionmanager/toolbaractioncontainer.h \
+    actionmanager/menumanager.h \
+    guicore_global.h
 
 SOURCES += \
     guicoreplugin.cpp \
@@ -24,7 +28,7 @@ SOURCES += \
     actionmanager/actioncontainer.cpp \
     actionmanager/actionmanager_private.cpp \
     actionmanager/actionmanager.cpp \
-    actionmanager/menuactioncontainer.cpp \
     actionmanager/menubaractioncontainer.cpp \
     actionmanager/shortcut.cpp \
-    actionmanager/toolbaractioncontainer.cpp
+    actionmanager/toolbaractioncontainer.cpp \
+    actionmanager/menumanager.cpp

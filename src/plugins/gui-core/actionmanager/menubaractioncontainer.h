@@ -1,14 +1,16 @@
-#ifndef COREMANAGER_MENUBARACTIONCONTAINER_H
-#define COREMANAGER_MENUBARACTIONCONTAINER_H
+#ifndef GUICOREMANAGER_MENUBARACTIONCONTAINER_H
+#define GUICOREMANAGER_MENUBARACTIONCONTAINER_H
 
 #include "actioncontainer.h"
 
+QT_BEGIN_NAMESPACE
 class QMenuBar;
+QT_END_NAMESPACE
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
-class MenuBarActionContainer : public ActionContainer
+class MenuBarActionContainer : public IActionContainer
 {
 public:
     MenuBarActionContainer();
@@ -27,6 +29,6 @@ private:
 };
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager
 
-#endif // COREMANAGER_MENUBARACTIONCONTAINER_H
+#endif // GUICOREMANAGER_MENUBARACTIONCONTAINER_H

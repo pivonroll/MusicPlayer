@@ -1,9 +1,9 @@
-#ifndef COREMANAGER_ACTIONMANAGER_SHORTCUT_H
-#define COREMANAGER_ACTIONMANAGER_SHORTCUT_H
+#ifndef GUICOREMANAGER_ACTIONMANAGER_SHORTCUT_H
+#define GUICOREMANAGER_ACTIONMANAGER_SHORTCUT_H
 
 #include <QKeySequence>
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
 class Shortcut
@@ -19,6 +19,6 @@ private:
 };
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager
 
-#endif // COREMANAGER_ACTIONMANAGER_SHORTCUT_H
+#endif // GUICOREMANAGER_ACTIONMANAGER_SHORTCUT_H

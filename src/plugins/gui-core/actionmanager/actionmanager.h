@@ -1,14 +1,16 @@
-#ifndef COREMANAGER_ACTIONMANAGER_H
-#define COREMANAGER_ACTIONMANAGER_H
+#ifndef GUICOREMANAGER_ACTIONMANAGER_H
+#define GUICOREMANAGER_ACTIONMANAGER_H
 
 #include <QString>
 
+QT_BEGIN_NAMESPACE
 class QAction;
+QT_END_NAMESPACE
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
-class ActionContainer;
+class IActionContainer;
 class ActionManager_Private;
 class Shortcut;
 
@@ -19,13 +21,13 @@ public:
     ~ActionManager();
 
     static ActionManager* instance();
-    static ActionContainer* createMenu(const QString &menuID);
-    static ActionContainer* createMenuBar(const QString &menuBarID);
-    static ActionContainer* createToolBar(const QString &toolBarID);
+    static IActionContainer* createMenu(const QString &menuID);
+    static IActionContainer* createMenuBar(const QString &menuBarID);
+    static IActionContainer* createToolBar(const QString &toolBarID);
 
-    static ActionContainer* menu(const QString &id);
-    static ActionContainer* menuBar(const QString &id);
-    static ActionContainer* toolBar(const QString &id);
+    static IActionContainer* menu(const QString &id);
+    static IActionContainer* menuBar(const QString &id);
+    static IActionContainer* toolBar(const QString &id);
 
     static Shortcut *createShortcut(const QString &id);
     static void removeShortcut(const QString &id);
@@ -40,6 +42,6 @@ private:
 };
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager
 
-#endif // COREMANAGER_ACTIONMANAGER_H
+#endif // GUICOREMANAGER_ACTIONMANAGER_H

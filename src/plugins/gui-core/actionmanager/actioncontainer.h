@@ -1,29 +1,27 @@
-#ifndef COREMANAGER_ACTIONCONTAINER_H
-#define COREMANAGER_ACTIONCONTAINER_H
+#ifndef GUICOREMANAGER_ACTIONCONTAINER_H
+#define GUICOREMANAGER_ACTIONCONTAINER_H
 
 #include <QString>
 #include "context.h"
 
+QT_BEGIN_NAMESPACE
 class QMenu;
 class QAction;
+QT_END_NAMESPACE
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
-class ActionContainer
+class IActionContainer
 {
 public:
-    ActionContainer();
-    virtual ~ActionContainer();
+    virtual ~IActionContainer();
 
     virtual void addAction(QAction *before, QAction *action) = 0;
-    virtual void addMenu(QAction *before, QMenu *menu) = 0;
-
     virtual void removeAction(QAction *action) = 0;
-    virtual void removeMenu(QMenu *menu) = 0;
 };
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager
 
-#endif // COREMANAGER_ACTIONCONTAINER_H
+#endif // GUICOREMANAGER_ACTIONCONTAINER_H

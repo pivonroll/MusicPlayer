@@ -2,13 +2,15 @@
 #define PLAYSYSTEM_INTERNAL_PLAYSYSTEMPLUGIN_H
 
 #include <iplugin.h>
+#include "soundsystem_global.h"
 
-namespace PlaySystem {
+namespace SoundSystem {
 namespace Internal {
 
-class SoundSystemPlugin : public QObject, public ExtensionSystem::IPlugin
+class SOUNDSYSTEM_EXPORT SoundSystemPlugin : public QObject, public ExtensionSystem::IPlugin
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID IPlugin_iic FILE "soundsystem.json")
     Q_INTERFACES(ExtensionSystem::IPlugin)
 public:
     SoundSystemPlugin();
@@ -18,6 +20,6 @@ public:
 };
 
 } // namespace Internal
-} // namespace PlaySystem
+} // namespace SoundSystem
 
 #endif // PLAYSYSTEM_INTERNAL_PLAYSYSTEMPLUGIN_H

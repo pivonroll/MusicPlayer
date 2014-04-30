@@ -35,4 +35,4 @@ GuiCorePlugin *GuiCorePlugin::instance()
 } // namespace Internal
 } // namespace GuiCore
 
-Q_EXPORT_PLUGIN(GuiCore::Internal::GuiCorePlugin)
+Q_PLUGIN_METADATA(IID IPlugin_iic)

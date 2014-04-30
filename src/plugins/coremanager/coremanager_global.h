@@ -1,0 +1,12 @@
+#ifndef COREMANAGER_GLOBAL_H
+#define COREMANAGER_GLOBAL_H
+
+#include <QtGlobal>
+
+#if defined(COREMANAGER_LIBRARY)
+#  define COREMANAGER_EXPORT Q_DECL_EXPORT
+#else
+#  define COREMANAGER_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // COREMANAGER_GLOBAL_H

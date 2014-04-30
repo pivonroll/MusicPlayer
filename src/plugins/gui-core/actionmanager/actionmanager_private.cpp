@@ -1,6 +1,6 @@
 #include "actionmanager_private.h"
 
-namespace CoreManager {
+namespace GuiCoreManager {
 namespace ActionManager {
 
 ActionManager_Private::ActionManager_Private()
@@ -8,4 +8,4 @@ ActionManager_Private::ActionManager_Private()
 }
 
 } // namespace ActionManager
-} // namespace CoreManager
+} // namespace GuiCoreManager
