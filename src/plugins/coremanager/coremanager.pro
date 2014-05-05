@@ -23,3 +23,6 @@ SOURCES += \
     mimedatabase/mimetype.cpp \
     mimedatabase/mimedatabase_private.cpp
 
+OTHER_FILES += \
+    coremanager.json
+

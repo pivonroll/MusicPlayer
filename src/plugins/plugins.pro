@@ -3,7 +3,8 @@ CONFIG += ordered
 SUBDIRS += \
     coremanager_plugin \
     soundsystem_plugin \
-    gui-core
+    gui-core \
+    audiodevices
 
 coremanager_plugin.subdir = coremanager
 

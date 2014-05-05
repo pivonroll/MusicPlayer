@@ -12,7 +12,7 @@ namespace Internal {
 
 class CoreManager_Private;
 
-class COREMANAGER_EXPORT CorePlugin : public QObject, public ExtensionSystem::IPlugin
+class COREMANAGER_EXPORT CorePlugin : public ExtensionSystem::IPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID IPlugin_iic FILE "coremanager.json")

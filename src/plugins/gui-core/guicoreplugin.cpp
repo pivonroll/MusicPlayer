@@ -3,7 +3,6 @@
 #include "mainwindow.h"
 
 namespace GuiCore {
-namespace Internal {
 
 GuiCorePlugin* GuiCorePlugin::m_instance = 0;
 
@@ -32,7 +31,6 @@ GuiCorePlugin *GuiCorePlugin::instance()
     return m_instance;
 }
 
-} // namespace Internal
 } // namespace GuiCore
 
 Q_PLUGIN_METADATA(IID IPlugin_iic)

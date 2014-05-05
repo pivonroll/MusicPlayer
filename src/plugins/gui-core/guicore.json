@@ -1,0 +1,6 @@
+{
+            "name" : "guicore",
+         "version" : "0.0.1",
+    "dependencies" : [
+        {"name" : "coremanager", "version" : "0.0.1"}]
+} 

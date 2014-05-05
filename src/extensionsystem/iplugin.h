@@ -8,7 +8,7 @@
 
 namespace ExtensionSystem {
 
-class EXTENSIONSYSTEM_EXPORT IPlugin
+class EXTENSIONSYSTEM_EXPORT IPlugin : public QObject
 {
 public:
     IPlugin();

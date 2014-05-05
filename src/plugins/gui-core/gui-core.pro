@@ -32,3 +32,6 @@ SOURCES += \
     actionmanager/shortcut.cpp \
     actionmanager/toolbaractioncontainer.cpp \
     actionmanager/menumanager.cpp
+
+OTHER_FILES += \
+    guicore.json

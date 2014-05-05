@@ -7,7 +7,7 @@
 namespace SoundSystem {
 namespace Internal {
 
-class SOUNDSYSTEM_EXPORT SoundSystemPlugin : public QObject, public ExtensionSystem::IPlugin
+class SOUNDSYSTEM_EXPORT SoundSystemPlugin : public ExtensionSystem::IPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID IPlugin_iic FILE "soundsystem.json")

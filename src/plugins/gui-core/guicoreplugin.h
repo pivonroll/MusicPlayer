@@ -9,9 +9,7 @@ namespace Gui {
     class MainWindow;
 }
 
-namespace Internal {
-
-class GUICORE_EXPORT GuiCorePlugin : public QObject, public ExtensionSystem::IPlugin
+class GUICORE_EXPORT GuiCorePlugin : public ExtensionSystem::IPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID IPlugin_iic FILE "guicore.json")
@@ -30,7 +28,6 @@ private:
     static GuiCorePlugin *m_instance;
 };
 
-} // namespace Internal
 } // namespace GuiCore
 
 #endif // GUICORE_INTERNAL_GUICOREPLUGIN_H
