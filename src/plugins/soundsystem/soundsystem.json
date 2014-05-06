@@ -4,4 +4,4 @@
     "dependencies" : [
             {"name" : "coremanager", "version" : "0.0.1"},
             {"name" : "audiodevices", "version" : "0.0.1"} ]
-} 
+}

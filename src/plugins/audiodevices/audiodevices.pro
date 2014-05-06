@@ -9,10 +9,11 @@ include(audiodevices_dependencies.pri)
 QT       += multimedia
 QT       -= gui
 
-TARGET = audiodevices
+TARGET = $$qtLibraryTarget(audiodevices)
 TEMPLATE = lib
 
 DEFINES += AUDIODEVICES_LIBRARY
+DESTDIR = $$PLUGIN_PATH
 
 SOURCES += \
     audiodevicesplugin.cpp \

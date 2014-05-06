@@ -11,10 +11,12 @@ include(interfaces/interfaces.pri)
 HEADERS += \
     soundsystemplugin.h \
     soundsystem_constants.h \
-    soundsystem_global.h
+    soundsystem_global.h \
+    mediaplayer.h
 
 SOURCES += \
-    soundsystemplugin.cpp
+    soundsystemplugin.cpp \
+    mediaplayer.cpp
 
 OTHER_FILES += \
     soundsystem.json
