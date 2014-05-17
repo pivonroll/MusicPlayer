@@ -18,13 +18,15 @@ DESTDIR = $$PLUGIN_PATH
 SOURCES += \
     audiodevicesplugin.cpp \
     audiodevice.cpp \
-    audiodevicemanager.cpp
+    audiodevicemanager.cpp \
+    audiodevicewatcher.cpp
 
 HEADERS +=\
 	audiodevices_global.h \
     audiodevicesplugin.h \
     audiodevice.h \
-    audiodevicemanager.h
+    audiodevicemanager.h \
+    audiodevicewatcher.h
 
 OTHER_FILES += \
     audiodevices.json
