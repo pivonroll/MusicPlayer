@@ -1,4 +1,7 @@
 #include "mediaplayercontainer.h"
+#include "imediaplayer.h"
+
+#include <QStringList>
 
 namespace SoundSystem {
 
@@ -11,7 +14,34 @@ MediaPlayerContainer *MediaPlayerContainer::instance()
 
 IMediaPlayer *MediaPlayerContainer::mediaPlayer(int index)
 {
-    return m_instance->m_mediaPlayers[index];
+    return instance()->m_mediaPlayers[index];
+}
+
+QList<IMediaPlayer *> MediaPlayerContainer::mediaPlayers(const QString &multimediaDataType)
+{
+    QList<IMediaPlayer *> players;
+    foreach (IMediaPlayer *const player, instance()->m_mediaPlayers) {
+        if (player->supportedMultimediaTypes().contains(multimediaDataType))
+            players.append(player);
+    }
+
+    return players;
+}
+
+int MediaPlayerContainer::mediaPlayerCount()
+{
+    return instance()->m_mediaPlayers.size();
+}
+
+void MediaPlayerContainer::addMediaPlayer(IMediaPlayer *player)
+{
+    if (!instance()->m_mediaPlayers.contains(player))
+        instance()->m_mediaPlayers.append(player);
+}
+
+void MediaPlayerContainer::removeMediaPlayer(IMediaPlayer *player)
+{
+    instance()->m_mediaPlayers.removeAll(player);
 }
 
 MediaPlayerContainer::MediaPlayerContainer(QObject *parent)

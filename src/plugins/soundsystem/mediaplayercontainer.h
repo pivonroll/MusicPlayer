@@ -12,11 +12,14 @@ class IMediaPlayer;
 
 class SOUNDSYSTEM_EXPORT MediaPlayerContainer : public QObject
 {
-    static MediaPlayerContainer *instance();
-
     static IMediaPlayer *mediaPlayer(int index);
+    static QList<IMediaPlayer *> mediaPlayers(const QString &multimediaDataType);
+    static int mediaPlayerCount();
+    static void addMediaPlayer(IMediaPlayer *player);
+    static void removeMediaPlayer(IMediaPlayer *player);
 
 private:
+    static MediaPlayerContainer *instance();
     MediaPlayerContainer(QObject *parent = 0);
     QList<IMediaPlayer *> m_mediaPlayers;
 

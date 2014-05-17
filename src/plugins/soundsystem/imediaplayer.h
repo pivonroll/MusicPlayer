@@ -43,6 +43,8 @@ public:
     virtual qreal playbackRate() const = 0;
     virtual void setPlaybackRate(qreal rate) = 0;
 
+    virtual QStringList supportedMultimediaTypes() const = 0;
+
 signals:
     void playlistChanged(PlaylistManager::Playlist *playlist);
     void volumeChanged(int volume);
