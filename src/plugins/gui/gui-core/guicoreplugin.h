@@ -18,10 +18,12 @@ class GUICORE_EXPORT GuiCorePlugin : public ExtensionSystem::IPlugin
 public:
     GuiCorePlugin();
     ~GuiCorePlugin();
-    void initialize();
     QString pluginName() const;
 
     static GuiCorePlugin* instance();
+
+protected:
+    void initialize();
 
 private:
     Gui::MainWindow *m_mainWindow;

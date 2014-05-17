@@ -21,8 +21,10 @@ public:
     CorePlugin();
     virtual ~CorePlugin();
     static CorePlugin* instance();
-    void initialize();
     QString pluginName() const;
+
+protected:
+    void initialize();
 
 private:
     static CorePlugin *m_instance;

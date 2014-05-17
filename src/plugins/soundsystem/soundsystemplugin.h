@@ -15,8 +15,10 @@ class SOUNDSYSTEM_EXPORT SoundSystemPlugin : public ExtensionSystem::IPlugin
 public:
     SoundSystemPlugin();
     ~SoundSystemPlugin();
-    void initialize();
     QString pluginName() const;
+
+protected:
+    void initialize();
 };
 
 } // namespace Internal

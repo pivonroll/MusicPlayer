@@ -1,5 +1,7 @@
 include(soundsystem_dependecies.pri)
 
+QT += multimedia
+
 TEMPLATE = lib
 TARGET = $$qtLibraryTarget(soundsystem)
 
@@ -12,11 +14,12 @@ HEADERS += \
     soundsystemplugin.h \
     soundsystem_constants.h \
     soundsystem_global.h \
-    mediaplayer.h
+    mediaplayercontainer.h \
+    imediaplayer.h
 
 SOURCES += \
     soundsystemplugin.cpp \
-    mediaplayer.cpp
+    mediaplayercontainer.cpp
 
 OTHER_FILES += \
     soundsystem.json

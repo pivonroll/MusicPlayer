@@ -10,11 +10,14 @@ namespace ExtensionSystem {
 
 class EXTENSIONSYSTEM_EXPORT IPlugin : public QObject
 {
+    friend class PluginManager;
 public:
     IPlugin();
     virtual ~IPlugin();
-    virtual void initialize() = 0;
     virtual QString pluginName() const = 0;
+
+protected:
+    virtual void initialize() = 0;
 };
 
 } // namespace ExtensionSystem

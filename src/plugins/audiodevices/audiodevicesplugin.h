@@ -16,9 +16,10 @@ public:
     AudioDevicesPlugin();
 
     // IPlugin interface
-public:
-    void initialize();
     QString pluginName() const;
+
+protected:
+    void initialize();
 };
 
 } // AudioDevices

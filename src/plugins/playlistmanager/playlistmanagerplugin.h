@@ -14,10 +14,11 @@ class PLAYLISTMANAGERSHARED_EXPORT PlaylistManagerPlugin : public ExtensionSyste
 public:
     PlaylistManagerPlugin();
 
-    void initialize();
     QString pluginName() const;
-};
 
+protected:
+    void initialize();
+};
 
 } // namespace PlaylistManager
 #endif // PLAYLISTMANAGER_PLAYLISTMANAGERPLUGIN_H

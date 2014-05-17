@@ -1,2 +1,0 @@
-include(../coremanager/coremanagerplugin.pri)
-
