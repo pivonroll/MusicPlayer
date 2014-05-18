@@ -15,7 +15,7 @@ SoundSystemPlugin::~SoundSystemPlugin()
 
 void SoundSystemPlugin::initialize()
 {
-    CoreManagerPlugin::Internal::CorePlugin *p = CoreManagerPlugin::Internal::CorePlugin::instance();
+    Core::Internal::CorePlugin *p = Core::Internal::CorePlugin::instance();
     Q_UNUSED(p)
 }
 

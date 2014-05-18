@@ -4,7 +4,7 @@
 #include <QHash>
 #include "mimetype.h"
 
-namespace CoreManager {
+namespace Core {
 namespace MimeDatabase {
 
 class MimeDatabase_Private

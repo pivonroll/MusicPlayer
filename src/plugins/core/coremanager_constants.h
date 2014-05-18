@@ -1,7 +1,7 @@
 #ifndef COREMANAGERCONSTANTS_H
 #define COREMANAGERCONSTANTS_H
 
-namespace CoreManagerPlugin {
+namespace Core {
 namespace Constants {
 
     char CoreManagerPlugin_Name[] = "CoreManagerPlugin";

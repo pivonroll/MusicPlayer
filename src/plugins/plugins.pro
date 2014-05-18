@@ -8,18 +8,18 @@ SUBDIRS += \
 	playlistmanager_plugin \
 	basicmediaplayer_plugin
 
-coremanager_plugin.subdir = coremanager
+coremanager_plugin.subdir = core
 
 playlistmanager_plugin.subdir = playlistmanager
 
 audiodevices_plugin.subdir = audiodevices
-audiodevices_plugin.depends = coremanager
+audiodevices_plugin.depends = core
 
 soundsystem_plugin.subdir = soundsystem
-soundsystem_plugin.depends = coremanager
+soundsystem_plugin.depends = core
 
 gui-core_plugin.subdir = gui/gui-core
-gui-core_plugin.depends = coremanager
+gui-core_plugin.depends = core
 
 basicmediaplayer_plugin.subdir = basicmediaplayer
 basicmediaplayer_plugin.depends = soundsystem_plugin

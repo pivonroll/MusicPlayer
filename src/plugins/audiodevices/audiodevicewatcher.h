@@ -10,6 +10,8 @@ class AudioDevice;
 class AudioDeviceWatcher : public QObject
 {
     Q_OBJECT
+    static void start();
+    static void stop();
 signals:
     void audioDeviceFound(AudioDevice *audioDevice);
     void audioDeviceRemoved(AudioDevice *audioDevice);
@@ -18,7 +20,7 @@ private:
     static AudioDeviceWatcher *instance();
     AudioDeviceWatcher();
 
-    AudioDeviceWatcher *m_instance;
+    static AudioDeviceWatcher *m_instance;
 };
 
 } // namespace AudioDevices

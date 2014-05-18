@@ -4,7 +4,7 @@
 #include <QFileInfo>
 #include <QDebug>
 
-namespace CoreManager {
+namespace Core {
 namespace MimeDatabase {
 
 MimeDatabase* MimeDatabase::m_instance = 0;

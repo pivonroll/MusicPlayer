@@ -1,2 +1,2 @@
-include($$PWD/../../coremanager/coremanagerplugin.pri)
+include($$PWD/../../core/core.pri)
 

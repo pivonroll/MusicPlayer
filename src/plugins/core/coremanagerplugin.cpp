@@ -3,7 +3,7 @@
 #include "coremanager_constants.h"
 #include <QDebug>
 
-namespace CoreManagerPlugin {
+namespace Core {
 namespace Internal {
 
 CorePlugin* CorePlugin::m_instance = 0;

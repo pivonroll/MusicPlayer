@@ -5,7 +5,7 @@
 
 class QMenu;
 
-namespace CoreManagerPlugin {
+namespace Core {
 namespace Internal {
 
 class CoreManager_Private

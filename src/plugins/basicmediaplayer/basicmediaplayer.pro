@@ -20,4 +20,7 @@ HEADERS +=\
         basicmediaplayer_global.h \
     basicmediaplayerplugin.h
 
+OTHER_FILES += \
+    basicmediaplayer.json
+
 

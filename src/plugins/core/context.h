@@ -2,7 +2,7 @@
 #define CONTEXT_H
 #include <QString>
 
-namespace CoreManager {
+namespace Core {
 namespace Context {
 
 class Context {

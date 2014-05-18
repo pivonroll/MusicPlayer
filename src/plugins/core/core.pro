@@ -1,7 +1,7 @@
-include(coremanagerplugin_dependecies.pri)
+include(core_dependecies.pri)
 
 TEMPLATE = lib
-TARGET = $$qtLibraryTarget(coremanager)
+TARGET = $$qtLibraryTarget(core)
 
 DESTDIR = $$PLUGIN_PATH
 DEFINES += COREMANAGER_LIBRARY
@@ -24,5 +24,5 @@ SOURCES += \
     mimedatabase/mimedatabase_private.cpp
 
 OTHER_FILES += \
-    coremanager.json
+	core.json
 

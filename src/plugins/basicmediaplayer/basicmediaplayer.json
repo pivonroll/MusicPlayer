@@ -1,7 +1,7 @@
 {
-            "name" : "soundsystem",
+            "name" : "basicmediaplayer",
          "version" : "0.0.1",
     "dependencies" : [
             {"name" : "core", "version" : "0.0.1"},
-            {"name" : "audiodevices", "version" : "0.0.1"} ]
+            {"name" : "soundsystem", "version" : "0.0.1"} ]
 }

@@ -3,7 +3,7 @@
 
 #include <QString>
 
-namespace CoreManager {
+namespace Core {
 namespace MimeDatabase {
 
 class MimeType

@@ -1,6 +1,6 @@
 #include "mimetype.h"
 
-namespace CoreManager {
+namespace Core {
 namespace MimeDatabase {
 
 MimeType::MimeType()

@@ -19,14 +19,16 @@ SOURCES += \
     audiodevicesplugin.cpp \
     audiodevice.cpp \
     audiodevicemanager.cpp \
-    audiodevicewatcher.cpp
+    audiodevicewatcher.cpp \
+    audiodevicediscoverymanager.cpp
 
 HEADERS +=\
 	audiodevices_global.h \
     audiodevicesplugin.h \
     audiodevice.h \
     audiodevicemanager.h \
-    audiodevicewatcher.h
+    audiodevicewatcher.h \
+    audiodevicediscoverymanager.h
 
 OTHER_FILES += \
     audiodevices.json

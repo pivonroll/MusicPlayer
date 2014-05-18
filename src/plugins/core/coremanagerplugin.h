@@ -4,7 +4,7 @@
 #include <iplugin.h>
 #include "coremanager_global.h"
 
-namespace CoreManagerPlugin {
+namespace Core {
 
 class ActionContainer;
 
@@ -15,7 +15,7 @@ class CoreManager_Private;
 class COREMANAGER_EXPORT CorePlugin : public ExtensionSystem::IPlugin
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID IPlugin_iic FILE "coremanager.json")
+    Q_PLUGIN_METADATA(IID IPlugin_iic FILE "core.json")
     Q_INTERFACES(ExtensionSystem::IPlugin)
 public:
     CorePlugin();

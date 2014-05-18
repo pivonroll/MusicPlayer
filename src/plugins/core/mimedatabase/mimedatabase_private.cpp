@@ -1,6 +1,6 @@
 #include "mimedatabase_private.h"
 
-namespace CoreManager {
+namespace Core {
 namespace MimeDatabase {
 
 MimeDatabase_Private::MimeDatabase_Private()

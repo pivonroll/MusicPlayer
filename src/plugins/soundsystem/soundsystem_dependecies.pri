@@ -1,2 +1,2 @@
-include(../coremanager/coremanagerplugin.pri)
+include(../core/core.pri)
 
