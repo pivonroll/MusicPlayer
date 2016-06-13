@@ -22,6 +22,9 @@ public:
 
     static GuiCorePlugin* instance();
 
+signals:
+    void initialized();
+
 protected:
     void initialize();
 
