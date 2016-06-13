@@ -24,6 +24,7 @@ public:
 
 signals:
     void initialized();
+    void uninitialized();
 
 protected:
     void initialize();
